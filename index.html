@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Desta - Portofolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .font-inter {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-playfair {
+      font-family: 'Playfair Display', serif;
+    }
+    .font-poppins {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 scroll-smooth font-poppins">
+
+  <!-- Header & Nav -->
+  <header class="w-full bg-[#f5f2ee] fixed z-50 animate-navbar-slide-down">
+    <div class="flex justify-between items-center px-6 py-4">
+      <button onclick="toggleMenu()" class="text-sm font-medium tracking-widest">MENU</button>
+      <div class="text-2xl font-semibold tracking-widest">DESTA MAULANA AZIZ</div>
+    </div>
+  </header>
+
+  <!-- Overlay dan Mobile Menu -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden" onclick="closeMenu()"></div>
+  <div id="mobileMenu" class="fixed top-0 left-0 h-full w-3/4 max-w-xs bg-white shadow-lg z-50 transform -translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="p-6 space-y-4">
+      <h2 class="text-lg font-bold">Navigasi</h2>
+      <ul class="space-y-2">
+        <li><a href="#about" onclick="closeMenu()">Tentang</a></li>
+        <li><a href="#skills" onclick="closeMenu()">Skill</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Proyek</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="h-screen relative flex items-center justify-center text-center px-4 pt-24 bg-cover bg-center font-playfair" style="background-image: url('images/hero-bg.png');">
+    <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+    <div class="relative z-10" data-aos="zoom-in">
+      <h1 class="text-[4rem] md:text-[5rem] leading-tight font-bold uppercase bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent drop-shadow-lg">
+        DESTA <br /> MAULANA AZIZ
+      </h1>
+      <p class="mt-4 text-sm italic text-white">Networking & Design</p>
+    </div>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section id="about" class="container mx-auto py-16 px-4" data-aos="fade-right">
+    <h2 class="text-3xl font-bold mb-8 text-center">Tentang Saya</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="w-full md:w-1/3 text-center">
+        <img src="images/foto-desta.jpg" alt="Foto Desta" class="rounded-full w-48 h-48 object-cover mx-auto shadow-lg">
+      </div>
+      <div class="w-full md:w-2/3 text-lg leading-relaxed">
+        <p>
+          Saya adalah lulusan SMKN 1 Katapang jurusan Teknik Komputer dan Jaringan yang memiliki semangat tinggi dalam bidang teknologi informasi, jaringan komputer, dan desain grafis...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-gray-200 py-16" data-aos="fade-left">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Keahlian</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-white p-4 shadow rounded">Adobe Family</div>
+        <div class="bg-white p-4 shadow rounded">Office Family</div>
+        <div class="bg-white p-4 shadow rounded">Interior Design</div>
+        <div class="bg-white p-4 shadow rounded">Networking</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyek -->
+  <section id="projects" class="container mx-auto py-16 px-4" data-aos="zoom-in">
+    <h2 class="text-3xl font-bold mb-6">Proyek Saya</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded shadow p-4">
+        <img src="images/gambar1.jpg" alt="Proyek 1" class="mb-4 rounded">
+        <h3 class="text-xl font-semibold">Interior Design</h3>
+        <p class="text-sm">Using some 3d Games to make an Interior Design.</p>
+      </div>
+            <div class="bg-white rounded shadow p-4">
+        <img src="images/gambar3.jpg" alt="Proyek 3" class="mb-4 rounded">
+        <h3 class="text-xl font-semibold">Networking</h3>
+        <p class="text-sm">Makin some of networking plan for user.</p>
+      </div>
+      <div class="bg-white rounded shadow p-4">
+        <img src="images/gambar2.jpg" alt="Proyek 2" class="mb-4 rounded">
+        <h3 class="text-xl font-semibold">Design Graphic</h3>
+        <p class="text-sm">Makin some dummy project with adobe family.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="bg-gray-800 text-white py-16" data-aos="fade-up">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Hubungi Saya</h2>
+      <p>Email: destamaulanaaziz@gmail.com</p>
+      <p>WhatsApp: 085179706723</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-gray-900 text-white text-sm">
+    © 2025 Desta Maulana Aziz. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('menuOverlay');
+      menu.classList.toggle('-translate-x-full');
+      overlay.classList.toggle('hidden');
+    }
+    function closeMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('menuOverlay');
+      menu.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
